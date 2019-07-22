@@ -14,11 +14,19 @@ class ListaViewController: UIViewController {
         setBackground()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        print(filteredObjects.count)
+        print(model.data.count)
+        
     }
     
+    @IBOutlet weak var table: UITableView!
     @IBOutlet weak var viewLeading: NSLayoutConstraint!
     
+    let checkingConnection = false
+    var filteredObjects: [Opis] = []
     var brojac = 0
+    
     @IBAction func barButton(_ sender: UIBarButtonItem) {
         brojac += 1
         if brojac == 1 {
@@ -44,24 +52,29 @@ class ListaViewController: UIViewController {
 
 extension ListaViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if model == nil {
-            return 0
+        if checkingConnection {
+            return filteredObjects.count
         } else {
-            return (model?.data.count)!
+            return model.data.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celija = tableView.dequeueReusableCell(withIdentifier: "celija", for: indexPath) as! CellData
-        celija.naziv.text = model?.data[indexPath.row].name
-        celija.adresa.text = model?.data[indexPath.row].address
         
+        if checkingConnection {
+            celija.naziv.text = filteredObjects[indexPath.row].name
+            celija.adresa.text = filteredObjects[indexPath.row].address
+        } else {
+            celija.naziv.text = model.data[indexPath.row].name
+            celija.adresa.text = model.data[indexPath.row].address
+        }
         return celija
     }
     
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let polje = model?.data[indexPath.row]
+        let polje = model.data[indexPath.row]
          performSegue(withIdentifier: "detalji", sender: polje)
         
         

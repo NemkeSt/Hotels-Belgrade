@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TNation_Zadatak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hoteli_BG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
         <!--Mapa View Controller-->
         <scene sceneID="pc1-qz-c9g">
             <objects>
-                <viewController id="GNO-9Y-Q9y" customClass="MapaViewController" customModule="TNation_Zadatak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GNO-9Y-Q9y" customClass="MapaViewController" customModule="Hoteli_BG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bin-80-X5S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,7 +157,7 @@
         <!--Lista View Controller-->
         <scene sceneID="UPO-rV-ZPj">
             <objects>
-                <viewController id="hVa-MH-y70" customClass="ListaViewController" customModule="TNation_Zadatak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hVa-MH-y70" customClass="ListaViewController" customModule="Hoteli_BG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1yK-xD-Jjw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +166,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celija" rowHeight="80" id="aB8-oc-zLG" customClass="CellData" customModule="TNation_Zadatak" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celija" rowHeight="80" id="aB8-oc-zLG" customClass="CellData" customModule="Hoteli_BG" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aB8-oc-zLG" id="mNw-A6-eMJ">
@@ -284,6 +284,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="table" destination="vCl-gh-KAE" id="HDj-qk-qnr"/>
                         <outlet property="viewLeading" destination="Jef-T2-mCq" id="d9P-3s-ax4"/>
                         <segue destination="pg3-Cj-isu" kind="show" identifier="detalji" id="uhO-oE-Aec"/>
                     </connections>
@@ -295,7 +296,7 @@
         <!--Detail View Controller-->
         <scene sceneID="G5f-t8-Bmb">
             <objects>
-                <viewController id="pg3-Cj-isu" customClass="DetailViewController" customModule="TNation_Zadatak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pg3-Cj-isu" customClass="DetailViewController" customModule="Hoteli_BG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qwq-ky-B5d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -546,7 +547,7 @@
         <image name="menu50x50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ql9-S8-diD"/>
+        <segue reference="uhO-oE-Aec"/>
         <segue reference="pSE-Fw-T6c"/>
         <segue reference="F5E-IR-Yom"/>
         <segue reference="MI9-jw-dMb"/>

@@ -41,9 +41,9 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
      ime.text = detaljniOpis.name
      adresa.text = detaljniOpis.address
-     grad.text = detaljniOpis.city.rawValue
+     grad.text = detaljniOpis.city
      adjustLabel()
-     radnoVreme.text = detaljniOpis.workingHour.fri.rawValue
+     radnoVreme.text = detaljniOpis.workingHour.fri
         
         
      

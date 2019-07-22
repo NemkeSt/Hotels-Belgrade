@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let fetchTable = ListaViewController().table
+    
 
         let url = URL(string: "https://demo2205443.mockable.io/locations-list")!
         
@@ -16,9 +19,39 @@ class ViewController: UIViewController {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            getData()
+            checkInternet()
             setBackground()
+            
         }
+    
+    func checkInternet() {
+        
+        if ReachabilityTest.isConnectedToNetwork() == false{
+            if let path = Bundle.main.path(forResource: "location-list", ofType: "json") {
+                do {
+                    let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                    let decoder = JSONDecoder()
+                    if let podaci = try? decoder.decode(Model.self, from: data) {
+                        model = podaci
+                        
+                       
+                     
+                    }
+                } catch {
+                    print("Not successful")
+                }
+            }
+            
+            let alert = UIAlertController(title: "No Internet Connection", message: "Check Internt Connection", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+                
+            
+        } else {
+            getData()
+        }
+        
+    }
         
         
         func getData() {

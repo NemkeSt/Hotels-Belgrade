@@ -26,7 +26,7 @@ class MapaViewController: UIViewController{
     }
     
     func napraviLokacije(){
-        for lokacije in model!.data {
+        for lokacije in model.data {
             let annotations = MKPointAnnotation()
             annotations.title = lokacije.name
             annotations.subtitle = lokacije.address

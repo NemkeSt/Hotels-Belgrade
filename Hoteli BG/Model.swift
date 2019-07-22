@@ -10,21 +10,25 @@ import Foundation
 
 
 
-struct Model: Codable{
-    var data: [Opis]
+struct Model: Codable {
+    var data = [Opis]()
 }
 
 struct Opis: Codable {
     var id: Int
-    var name, address: String
-    var city: City
+    var name: String
+    var address: String
+    var city: String
     var description: String
-    var countryID: Int
+    var countryId: Int
     var webSite: String
-    var status, accountType: Int
+    var status: Int
+    var accountType: Int
     var addDate: String
-    var placeGroupID: Int
-    var longitude, latitude, distance: Double
+    var placeGroupId: Int
+    var longitude: Double
+    var latitude: Double
+    var distance: Double
     var working: Bool
     var promotion: String
     var repertoire: Repertoire
@@ -32,56 +36,33 @@ struct Opis: Codable {
     var country: Country
     var reviewNum: Int
     var score: Double
-    var placeImgURL: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id, name, address, city, description
-        case countryID = "countryId"
-        case webSite, status, accountType, addDate
-        case placeGroupID = "placeGroupId"
-        case longitude, latitude, distance, working, promotion, repertoire, workingHour, country, reviewNum, score
-        case placeImgURL = "placeImgUrl"
-    }
-}
-
-enum City: String, Codable {
-    case belgrade = "Belgrade"
-    case kaluđerica = "Kaluđerica"
-    case vrčin = "Vrčin"
+    var placeImgUrl: String
 }
 
 struct Country: Codable {
-    var name: Name
-}
-
-enum Name: String, Codable {
-    case serbia = "Serbia"
+    var name: String
 }
 
 struct Repertoire: Codable {
-    var monday, tuesday, wednesday, thursday: String
-    var friday, saturday, sunday: String
+    var monday: String
+    var tuesday: String
+    var wednesday: String
+    var thursday: String
+    var friday: String
+    var saturday: String
+    var sunday: String
 }
 
 struct WorkingHour: Codable {
-    var mon, tue, wed, thu: Mon
-    var fri, sat: Fri
-    var sun: Mon
+    var mon: String
+    var tue: String
+    var wed: String
+    var thu: String
+    var fri: String
+    var sat: String
+    var sun: String
 }
 
-enum Fri: String, Codable {
-    case the00002400 = "00:00-24:00"
-    case the08000100 = "08:00-01:00"
-    case the09002400 = "09:00-24:00"
-}
-
-enum Mon: String, Codable {
-    case the00002400 = "00:00-24:00"
-    case the08002400 = "08:00-24:00"
-    case the09002400 = "09:00-24:00"
-}
-
-
-var model: Model?
+var model = Model()
 
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		040A290F2254ECCB0035CFFC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A290E2254ECCB0035CFFC /* DetailViewController.swift */; };
+		04258E8F22E5E37A00D1ED7E /* ReachabilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04258E8E22E5E37A00D1ED7E /* ReachabilityTest.swift */; };
+		04258E9222E6213700D1ED7E /* location-list.json in Resources */ = {isa = PBXBuildFile; fileRef = 04258E9122E6213700D1ED7E /* location-list.json */; };
 		044591D8225670F500934920 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044591D7225670F500934920 /* UILabel.swift */; };
 		0450615D2289FBBC001ACEC6 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0450615C2289FBBC001ACEC6 /* background.jpg */; };
 		04ABD0BB2253C03900B9C38D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ABD0BA2253C03900B9C38D /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		040A290E2254ECCB0035CFFC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		04258E8E22E5E37A00D1ED7E /* ReachabilityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityTest.swift; sourceTree = "<group>"; };
+		04258E9122E6213700D1ED7E /* location-list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "location-list.json"; sourceTree = "<group>"; };
 		044591D7225670F500934920 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		0450615C2289FBBC001ACEC6 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		04ABD0B72253C03900B9C38D /* Hoteli BG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hoteli BG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +78,9 @@
 				04ABD0CC2253C0AD00B9C38D /* ListaViewController.swift */,
 				04ABD0CE2253C0BB00B9C38D /* MapaViewController.swift */,
 				04ABD0D42253C18900B9C38D /* CellData.swift */,
+				04258E8E22E5E37A00D1ED7E /* ReachabilityTest.swift */,
 				0450615C2289FBBC001ACEC6 /* background.jpg */,
+				04258E9122E6213700D1ED7E /* location-list.json */,
 				04ABD0C12253C03A00B9C38D /* Assets.xcassets */,
 				044591D7225670F500934920 /* UILabel.swift */,
 				04ABD0C62253C03A00B9C38D /* Info.plist */,
@@ -140,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04258E9222E6213700D1ED7E /* location-list.json in Resources */,
 				0450615D2289FBBC001ACEC6 /* background.jpg in Resources */,
 				04ABD0C22253C03A00B9C38D /* Assets.xcassets in Resources */,
 				04ABD0C02253C03900B9C38D /* Main.storyboard in Resources */,
@@ -158,6 +165,7 @@
 				04ABD0BD2253C03900B9C38D /* ViewController.swift in Sources */,
 				04ABD0D72253C1DD00B9C38D /* Model.swift in Sources */,
 				04ABD0D52253C18900B9C38D /* CellData.swift in Sources */,
+				04258E8F22E5E37A00D1ED7E /* ReachabilityTest.swift in Sources */,
 				04ABD0BB2253C03900B9C38D /* AppDelegate.swift in Sources */,
 				044591D8225670F500934920 /* UILabel.swift in Sources */,
 				040A290F2254ECCB0035CFFC /* DetailViewController.swift in Sources */,
